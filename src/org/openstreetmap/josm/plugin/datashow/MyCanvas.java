@@ -1,4 +1,4 @@
-package testCanvas;
+package org.openstreetmap.josm.plugin.datashow;
 
 import java.awt.Color;
 import java.awt.Graphics;
