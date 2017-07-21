@@ -1,4 +1,4 @@
-package org.openstreetmap.josm.plugin.datashow;
+package org.openstreetmap.josm.plugins.datashow;
 
 import static org.openstreetmap.josm.tools.I18n.tr;
 
@@ -55,44 +55,6 @@ public class DatashowAction extends MapMode implements MouseListener{
     private static Cursor getCursor() {
         return ImageProvider.getCursor("crosshair", "info-sml");
     }
-    public void cancel() {
-        cancel = true;
-    }
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-        if (!Main.map.mapView.isActiveLayerDrawable()) {
-            return;
-        }
-        requestFocusInMapView();
-        updateKeyModifiers(e);
-        if (e.getButton() == MouseEvent.BUTTON1) {
-        	showData(e.getPoint());
-        }
-    }
-
-    @Override
-    protected void updateKeyModifiers(MouseEvent e) {
-        ctrl = (e.getModifiers() & ActionEvent.CTRL_MASK) != 0;
-        alt = (e.getModifiers() & (ActionEvent.ALT_MASK | InputEvent.ALT_GRAPH_MASK)) != 0;
-        shift = (e.getModifiers() & ActionEvent.SHIFT_MASK) != 0;
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-    }
     
     protected void showData(Point clickPoint) {
         cancel = false;
@@ -148,4 +110,45 @@ public class DatashowAction extends MapMode implements MouseListener{
             return;
         }
     }
+    
+    public void cancel() {
+        cancel = true;
+    }
+    
+    @Override
+    public void mouseClicked(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        if (!Main.map.mapView.isActiveLayerDrawable()) {
+            return;
+        }
+        requestFocusInMapView();
+        updateKeyModifiers(e);
+        if (e.getButton() == MouseEvent.BUTTON1) {
+        	showData(e.getPoint());
+        }
+    }
+
+    @Override
+    protected void updateKeyModifiers(MouseEvent e) {
+        ctrl = (e.getModifiers() & ActionEvent.CTRL_MASK) != 0;
+        alt = (e.getModifiers() & (ActionEvent.ALT_MASK | InputEvent.ALT_GRAPH_MASK)) != 0;
+        shift = (e.getModifiers() & ActionEvent.SHIFT_MASK) != 0;
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+    
+   
 }

@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="testCanvas" default="dist" basedir=".">
-
-    <!-- enter the SVN commit message -->
-    <property name="commit.message" value="Commit message"/>
-    <!-- enter the *lowest* JOSM version this plugin is currently compatible with -->
-    <property name="plugin.main.version" value="10580"/>
-
-    <!-- Configure these properties (replace "..." accordingly).
-         See https://josm.openstreetmap.de/wiki/DevelopersGuide/DevelopingPlugins
-    -->
-    <property name="plugin.author" value="Yawen; Candidates"/>
-    <property name="plugin.class" value="org.openstreetmap.josm.plugins.datashow.DataShow"/>
-    <property name="plugin.description" value="visualize the data"/>
-    <property name="plugin.icon" value="images/data.png"/>
-    <property name="plugin.link" value="https://github.com/lhf552004/dataShow"/>
-    
-	<property name="josm" location="../../core/dist/josm-custom.jar"/>
-	<property name="plugin.dist.dir" value="../../dist"/>
-	
-    <!-- ** include targets that all plugins have in common ** -->
-    <import file="../build-common.xml"/>
-  
+<project name="dataShow" default="dist" basedir=".">
+  <!-- enter the SVN commit message -->
+  <property name="commit.message" value="Datashow: for interview"/>
+  <!-- enter the *lowest* JOSM version this plugin is currently compatible with -->
+  <property name="plugin.main.version" value="10604"/>
+  <!-- Configure these properties (replace "..." accordingly). See https://josm.openstreetmap.de/wiki/DevelopersGuide/DevelopingPlugins -->
+  <property name="plugin.author" value="Yawen; Candidates"/>
+  <property name="plugin.class" value="org.openstreetmap.josm.plugins.datashow.DataShowPlugin"/>
+  <property name="plugin.description" value="visualize the data"/>
+  <property name="plugin.icon" value="images/data.png"/>
+  <property name="plugin.link" value="https://github.com/lhf552004/dataShow"/>
+  <property name="josm" location="../../core/dist/josm-custom.jar"/>
+  <property name="plugin.dist.dir" value="../../dist"/>
+  <!-- ** include targets that all plugins have in common ** -->
+  <import file="../build-common.xml"/>
 </project>

@@ -1,4 +1,4 @@
-package org.openstreetmap.josm.plugin.datashow;
+package org.openstreetmap.josm.plugins.datashow;
 
 import java.util.HashMap;
 import java.util.Map;
