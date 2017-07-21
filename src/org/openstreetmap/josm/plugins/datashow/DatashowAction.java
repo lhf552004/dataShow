@@ -33,7 +33,7 @@ public class DatashowAction extends MapMode implements MouseListener{
 
     DatashowAction(MapFrame mapFrame) {
         super(tr("Datashow info"), "info-sml", tr("Datashow info."),
-                Shortcut.registerShortcut("tools:Datashow", tr("Tool: {0}", tr("Datashow info")), KeyEvent.VK_X, Shortcut.ALT_CTRL),
+                Shortcut.registerShortcut("tools:Datashow", tr("Tool: {0}", tr("Datashow info")), KeyEvent.VK_Y, Shortcut.ALT_CTRL),
                 mapFrame, getCursor());
     }
     @Override
@@ -53,7 +53,13 @@ public class DatashowAction extends MapMode implements MouseListener{
     }
 
     private static Cursor getCursor() {
-        return ImageProvider.getCursor("crosshair", "info-sml");
+    	
+    	try {
+    		return ImageProvider.getCursor("crosshair", "info-sml");
+    	}catch(Exception ex) {
+    		return null;
+    	}
+        
     }
     
     protected void showData(Point clickPoint) {
