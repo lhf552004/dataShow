@@ -7,6 +7,7 @@ import javax.swing.JComponent;
 
 public class MyCanvas extends JComponent {
 	
+	@Override
 	public void paint(Graphics g) {
 		int[][] arr = SimulateData.simulateData();
 		int offsetX = 5;

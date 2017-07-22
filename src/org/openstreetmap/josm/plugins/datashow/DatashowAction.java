@@ -32,7 +32,7 @@ public class DatashowAction extends MapMode implements MouseListener{
     
 
     DatashowAction(MapFrame mapFrame) {
-        super(tr("Datashow info"), "info-sml", tr("Datashow info."),
+        super(tr("Datashow info"), "data", tr("Datashow info."),
                 Shortcut.registerShortcut("tools:Datashow", tr("Tool: {0}", tr("Datashow info")), KeyEvent.VK_Y, Shortcut.ALT_CTRL),
                 mapFrame, getCursor());
     }
@@ -55,7 +55,7 @@ public class DatashowAction extends MapMode implements MouseListener{
     private static Cursor getCursor() {
     	
     	try {
-    		return ImageProvider.getCursor("crosshair", "info-sml");
+    		return ImageProvider.getCursor("crosshair", "data");
     	}catch(Exception ex) {
     		return null;
     	}
@@ -83,7 +83,7 @@ public class DatashowAction extends MapMode implements MouseListener{
                     	MyCanvas canvas = new MyCanvas();
                         JScrollPane scrollPane = new JScrollPane(canvas);
                         Object[] objects = {scrollPane};
-                        final ImageIcon icon = new ImageIcon(getClass().getResource("/images/dialogs/info-sml.png"));
+                        final ImageIcon icon = new ImageIcon(getClass().getResource("/images/dialogs/data.png"));
                         JOptionPane.showMessageDialog(
                                 null, objects, tr("Datashow"), JOptionPane.PLAIN_MESSAGE, icon);
                     }

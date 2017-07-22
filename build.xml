@@ -8,7 +8,7 @@
   <property name="plugin.author" value="Yawen; Candidates"/>
   <property name="plugin.class" value="org.openstreetmap.josm.plugins.datashow.DataShowPlugin"/>
   <property name="plugin.description" value="visualize the data"/>
-  <property name="plugin.icon" value="images/mapmode/info-sml.png"/>
+  <property name="plugin.icon" value="images/data.png"/>
   <property name="plugin.link" value="https://github.com/lhf552004/dataShow"/>
   <property name="josm" location="../../core/dist/josm-custom.jar"/>
   <property name="plugin.dist.dir" value="../../dist"/>
